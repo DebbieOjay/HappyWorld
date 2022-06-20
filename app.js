@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const PORT = 5000;
+const port = Process.env.PORT || 5000;
 const fs = require("fs");
 
 const bodyParser = require("body-parser");
@@ -85,8 +85,8 @@ app.post("/about", (req, res) => {
   console.log("The request posted to about", req.body);
 });
  
-app.listen(PORT, () => {
-  console.log("listening on port", PORT);
+app.listen(port, () => {
+  console.log("listening on port", port);
 });   
  
 
